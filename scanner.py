@@ -11,10 +11,6 @@ from database import VulnerabilityDatabase
 
 
 class VulnerabilityScanner:
-    """
-    Scanner utilisant différentes stratégies d'analyse (Pattern Strategy)
-    Permet de changer dynamiquement le type d'analyse
-    """
     
     def __init__(self):
         self._strategy: Optional[AnalysisStrategy] = None
