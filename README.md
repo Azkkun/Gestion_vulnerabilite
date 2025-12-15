@@ -1,10 +1,8 @@
-# 🛡️ Système de Gestion de Vulnérabilités (mini SIEM)
+# 🛡️ SIEM - POO - 2025
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Design Patterns](https://img.shields.io/badge/Design%20Patterns-3-orange.svg)](https://refactoring.guru/design-patterns)
-
-> Projet académique de conception orientée objet - Système de gestion de vulnérabilités avec scanner simulé et base de données CVE
 
 ## 📋 Table des matières
 
