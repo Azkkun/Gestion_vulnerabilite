@@ -21,7 +21,7 @@ class ReportGenerator:
         
         report = []
         report.append("\n" + "="*80)
-        report.append("📊 RAPPORT DE SÉCURITÉ - RÉSUMÉ")
+        report.append(" RAPPORT DE SÉCURITÉ - RÉSUMÉ")
         report.append("="*80)
         report.append(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         report.append(f"Total de vulnérabilités: {stats['total_vulnerabilities']}")
@@ -53,7 +53,7 @@ class ReportGenerator:
         
         report = []
         report.append("\n" + "="*80)
-        report.append("📋 RAPPORT DE SÉCURITÉ - DÉTAILS DES VULNÉRABILITÉS")
+        report.append(" RAPPORT DE SÉCURITÉ - DÉTAILS DES VULNÉRABILITÉS")
         report.append("="*80)
         report.append(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         report.append(f"Nombre total: {len(vulnerabilities)}")
@@ -72,7 +72,7 @@ class ReportGenerator:
             report.append(f"{'─'*80}")
             report.append(f"ID: {vuln.get_id()}")
             report.append(f"Type: {metadata.get('type', 'N/A').upper()}")
-            report.append(f"Sévérité: {vuln.get_severity().name} ⚠️")
+            report.append(f"Sévérité: {vuln.get_severity().name} ")
             report.append(f"Score CVSS: {vuln.get_score():.2f}/10.0")
             
             if "base_score" in metadata:
@@ -92,14 +92,14 @@ class ReportGenerator:
                 report.append(f"  Exploit disponible: {'✓ OUI' if metadata['exploit_available'] else '✗ Non'}")
                 report.append(f"  Complexité: {metadata['exploit_complexity']}")
                 if metadata.get('public_exploit'):
-                    report.append(f"  ⚠️  Exploit PUBLIC disponible!")
+                    report.append(f"    Exploit PUBLIC disponible!")
             
             if "business_impact" in metadata:
                 report.append(f"\nImpact:")
                 report.append(f"  {metadata['business_impact']}")
                 report.append(f"  Assets affectés ({metadata['asset_count']}): {', '.join(metadata['affected_assets'])}")
                 if metadata.get('data_exposure_risk'):
-                    report.append(f"  ⚠️  Risque d'exposition de données!")
+                    report.append(f"    Risque d'exposition de données!")
             
             if "remediation" in metadata:
                 report.append(f"\nContre-mesures:")
@@ -118,4 +118,4 @@ class ReportGenerator:
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(content)
         
-        print(f"💾 Rapport sauvegardé: {filename}")
+        print(f" Rapport sauvegardé: {filename}")
