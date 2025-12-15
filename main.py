@@ -37,7 +37,7 @@ def main():
     # Affichage des vulnérabilités critiques
     critical = system.get_critical_vulnerabilities()
     if critical:
-        print(f"\n⚠️  ALERTE: {len(critical)} vulnérabilité(s) CRITIQUE(S) détectée(s)!")
+        print(f"\n  ALERTE: {len(critical)} vulnérabilité(s) CRITIQUE(S) détectée(s)!")
         for vuln in critical:
             print(f"   • {vuln.get_id()} - Score: {vuln.get_score():.2f}")
 
