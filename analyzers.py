@@ -139,9 +139,9 @@ class DependencyAnalyzer(AnalysisStrategy):
     
     def analyze(self, target: str) -> list[Vulnerability]:
         """Simule une analyse de dépendances"""
-        print(f"  📦 Analyse du fichier package.json...")
-        print(f"  📦 Vérification des versions...")
-        print(f"  📦 Consultation de la base CVE...")
+        print(f"   Analyse du fichier package.json...")
+        print(f"   Vérification des versions...")
+        print(f"   Consultation de la base CVE...")
         
         vulnerabilities = []
         
@@ -199,9 +199,9 @@ class FileSystemAnalyzer(AnalysisStrategy):
     
     def analyze(self, target: str) -> list[Vulnerability]:
         """Simule une analyse du système de fichiers"""
-        print(f"  📁 Scan des permissions de fichiers...")
-        print(f"  📁 Recherche de fichiers sensibles...")
-        print(f"  📁 Vérification des configurations...")
+        print(f"   Scan des permissions de fichiers...")
+        print(f"   Recherche de fichiers sensibles...")
+        print(f"   Vérification des configurations...")
         
         vulnerabilities = []
         
