@@ -89,7 +89,7 @@ class VulnerabilityDatabase:
     def add_vulnerability(self, vulnerability: Vulnerability) -> None:
         """Ajoute une vulnérabilité à la base"""
         self._vulnerabilities[vulnerability.get_id()] = vulnerability
-        print(f"  💾 Vulnérabilité ajoutée à la BDD: {vulnerability.get_id()}")
+        print(f"  Vulnérabilité ajoutée à la BDD: {vulnerability.get_id()}")
     
     def get_vulnerability(self, vuln_id: str) -> Optional[Vulnerability]:
         """Récupère une vulnérabilité par son ID"""
