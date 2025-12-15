@@ -31,7 +31,7 @@ class VulnerabilityDatabase:
             self._cve_database: Dict[str, CVEData] = {}
             self._initialize_cve_database()
             VulnerabilityDatabase._initialized = True
-            print("✅ Base de données initialisée (Singleton)")
+            print(" Base de données initialisée (Singleton)")
     
     def _initialize_cve_database(self):
         """Initialise la base CVE avec des données d'exemple"""
