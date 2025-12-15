@@ -43,9 +43,9 @@ class NetworkAnalyzer(AnalysisStrategy):
     
     def analyze(self, target: str) -> list[Vulnerability]:
         """Simule une analyse réseau"""
-        print(f"  🔍 Scan des ports et services...")
-        print(f"  🔍 Test d'injection SQL...")
-        print(f"  🔍 Test XSS...")
+        print(f"   Scan des ports et services...")
+        print(f"   Test d'injection SQL...")
+        print(f"   Test XSS...")
         
         vulnerabilities = []
         
