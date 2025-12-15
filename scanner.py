@@ -24,7 +24,7 @@ class VulnerabilityScanner:
     def scan(self, target: str) -> list[Vulnerability]:
         """Effectue un scan avec la stratégie actuelle"""
         if not self._strategy:
-            raise ValueError("❌ Aucune stratégie d'analyse définie")
+            raise ValueError(" Aucune stratégie d'analyse définie")
         
         print(f"🎯 Cible: {target}")
         vulnerabilities = self._strategy.analyze(target)
@@ -33,7 +33,7 @@ class VulnerabilityScanner:
         for vuln in vulnerabilities:
             self._db.add_vulnerability(vuln)
         
-        print(f"✅ {len(vulnerabilities)} vulnérabilité(s) détectée(s)\n")
+        print(f" {len(vulnerabilities)} vulnérabilité(s) détectée(s)\n")
         return vulnerabilities
     
     def scan_all(self, target: str) -> list[Vulnerability]:
