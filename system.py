@@ -23,7 +23,7 @@ class VulnerabilityManagementSystem:
     def scan_target(self, target: str, analysis_type: Optional[str] = None) -> None:
         """Scanne une cible avec un type d'analyse spécifique ou complet"""
         print(f"\n{'='*80}")
-        print(f"🚀 DÉMARRAGE DU SCAN: {target}")
+        print(f" DÉMARRAGE DU SCAN: {target}")
         print(f"{'='*80}")
         
         if analysis_type == "network":
@@ -37,7 +37,7 @@ class VulnerabilityManagementSystem:
             self._scanner.scan(target)
         else:
             # Scan complet avec toutes les stratégies
-            print("📋 Mode: Scan complet (toutes les stratégies)")
+            print(" Mode: Scan complet (toutes les stratégies)")
             self._scanner.scan_all(target)
     
     def generate_report(self, filename: str = "security_report.txt", 
