@@ -19,14 +19,14 @@ class VulnerabilityScanner:
     def set_strategy(self, strategy: AnalysisStrategy) -> None:
         """Définit la stratégie d'analyse (changement dynamique)"""
         self._strategy = strategy
-        print(f"\n🔧 Stratégie d'analyse: {strategy.get_name()}")
+        print(f"\n Stratégie d'analyse: {strategy.get_name()}")
     
     def scan(self, target: str) -> list[Vulnerability]:
         """Effectue un scan avec la stratégie actuelle"""
         if not self._strategy:
             raise ValueError(" Aucune stratégie d'analyse définie")
         
-        print(f"🎯 Cible: {target}")
+        print(f" Cible: {target}")
         vulnerabilities = self._strategy.analyze(target)
         
         # Ajoute les vulnérabilités à la base de données (Singleton)
