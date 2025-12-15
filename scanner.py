@@ -1,7 +1,7 @@
 """
 scanner.py
 ==========
-Scanner de vulnérabilités utilisant le pattern Strategy
+Scanner de vulnérabilités 
 """
 
 from typing import Optional
